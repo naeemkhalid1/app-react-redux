@@ -13,3 +13,8 @@
     text-overflow: ellipsis;
     padding: 0 5px;
 }
+.button-inline{
+    background-color: teal;
+    padding: 5px;
+    color: white;
+}

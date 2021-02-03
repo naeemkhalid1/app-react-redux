@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { doFetchStories } from '../action/story';
+import Store from '../store/Index'
 // import Button from './Button';
  
 class SearchStories extends Component {
@@ -25,7 +26,14 @@ class SearchStories extends Component {
   }
   onChange(event) {
     const { value } = event.target;
+    if(value)
+    {
+      this.props.onFetchStories(value)
+    }
     this.setState({ query: value });
+  }
+  componentDidMount(){
+ Store.dispatch(doFetchStories());
   }
  
   render() {

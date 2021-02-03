@@ -1,34 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import express from 'express';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import Store from "./store/Index";
-import {STORY_ARCHIVE  } from "./constants/actionTypes";
-import archiveReducer from './reducers/archive';
-import { getReadableStories } from "./selectors/story";
-import { doArchiveStory } from "./action/archive";
+// import {STORY_ARCHIVE  } from "./constants/actionTypes";
+// import archiveReducer from './reducers/archive';
+// import { getReadableStories } from "./selectors/story";
+// import { doArchiveStory } from "./action/archive";
 import { Provider } from "react-redux";
 
+// const app= express();
+// app.listen(3000, () =>
+//   console.log('Example app listening on port 3000!'),
+// );
 
-// const stories=[{
-//   title:'React',
-//   url:'https://facebook.github.io/react/',
-//   author:'jordan Walke',
-//   num_comments:3,
-//   points:4,
-//   objectID:0,
-// },
-// {
-//   title:'Redux',
-//   url:'https://github.com/reactjs/redux/',
-//   author:'Dan Abramov,Andrew Clark',
-//   num_comments:5,
-//   points:4,
-//   objectID:1,                   
-// },
-// ]
-// function render(){
 ReactDOM.render(
   <Provider store={Store}>
   <React.StrictMode>
